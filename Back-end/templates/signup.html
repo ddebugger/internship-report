@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}List Page{% endblock %}
+ 
+{% block content %} 
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+
+
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
+
+
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #00b074;">
+            <div class="featured-image mb-3">
+                <img src="{{ url_for('static', path='img/signup.png')}}"  class="image-fluid" style="width: 250px;">
+            </div>
+            <p class="text-white fs-2" style="font-family: 'courier New', monospace; font-weight: 600;">Be verified</p>
+            <small class="text-white text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace;">get the job of your dream</small>
+
+        </div>
+
+        <form class="col-md-6 right-box" method="post" action="/signupuser">
+            <div class="row align-items-center">
+                <div class="header-text mb-4">
+                    <h1><b>Hi!!</b></h1>
+                    <p>We are  happy to have you</p>
+                </div>
+                <div class="input-group mb-3">            
+                    <input name="name" type="text" id="name" class="form-control form-control-lg bg-light fs-6" value="{{ name }}" placeholder="Full Name">  
+                </div>
+                <div class="input-group mb-3">            
+                    <input name="email" type="text" id="mail"class="form-control form-control-lg bg-light fs-6" value="{{ email }}" placeholder="email">  
+                </div>
+                <div class="input-group mb-3">
+                    <input name="username" type="text" id="username" class="form-control form-control-lg bg-light fs-6" value="{{ username }}" placeholder="user name">  
+                </div>
+                <div class="input-group mb-3">
+                    <input name="password" type="password" id="pass" class="form-control form-control-lg bg-light fs-6" value="{{ password }}" placeholder="password">  
+                </div>
+                <div class="input-group mb-3">
+                    <input name="cpassword" type="password" id="pass" class="form-control form-control-lg bg-light fs-6" value="{{ password }}" placeholder=" confirm password">  
+                </div>
+                <div class="input-group mb-3">
+                    <button class="btn btn-lg w-100 fs-6" style="background-color: #2b9bff;">SignUp</button>
+                </div>
+                <!-- <div class="input-group mb-3">
+                    <button class="btn btn-lg btn-light w-100 fs-6"><img src="{{ url_for('static', path='img/google.png')}}" style="width:20px" class="m-2"><small>SignUp with Google</small></button>
+                </div> -->
+                <div class="row">
+                    <small class="text-center fs-4">Already have an account? <a href="/login"> Login</a></small>
+                </div>
+                
+            </div> 
+               
+        </form>
+
+        
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Create Page{% endblock %}
+ 
+{% block content %} 
+
+        <!-- Header End -->
+        <div class="container-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Create Job</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Create Job</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Header End --> 
+ 
+
+        <div class="w-50  m-auto">
+            <h4 class="mb-4">Create a Job</h4>
+            <form action="/add" method="post">
+                <div class="row g-3">
+                    <div class="col-12 col-sm-6">
+                        <label for="">Job Title</label>
+                        <input type="text" class="form-control" name="title" placeholder="Title" >
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label for="">Job Role</label>
+                        <input type="text" class="form-control" name="role" placeholder="Position">
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label for="">Qualifications</label>
+                        <input type="text" class="form-control" name="qualification" placeholder="Criteria">
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label for="">Town</label>
+                        <input type="text" class="form-control" name="town" placeholder="Location"> 
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label for="">Company's Name</label>
+                        <input type="text" class="form-control" name="name" placeholder="Location"> 
+                    </div>
+                    <!-- <div class="col-12 col-sm-6">
+                        <label for="">Company Logo</label>
+                        <input type="file" class="form-control" name="file"> 
+                    </div> -->
+                    <div class="col-12 col-sm-6 ">
+                        <label for="">Salary</label>
+                        <input type="text" class="form-control" name="salary" placeholder="estimated Salary"> 
+                    </div>
+                    <div class="col-12">
+                        <label for="">Job description</label>
+                        <textarea class="form-control" name="description" rows="5" placeholder="Desc"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <input type="submit"  value="Create now" class="btn btn-secondary w-100">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+{% endblock%}   
